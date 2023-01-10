@@ -1,3 +1,5 @@
+#importing necessary modules
+
 from breezypythongui import EasyFrame
 import tkinter as tk
 from tkinter import ttk
@@ -5,7 +7,9 @@ from tkinter import PhotoImage, N, S, W, E
 import random
 
 class GoodKittyBadKitty(EasyFrame):
- 
+
+#setting up main window
+    
     def __init__(self):
         EasyFrame.__init__(self, title = "Good Kitty Bad Kitty",
                            width = 1200, height = 1000)
@@ -25,6 +29,8 @@ class GoodKittyBadKitty(EasyFrame):
 
         self.addButton(text = "Close", row = 4, column = 0,
                        columnspan = 2, command = self.close)
+
+#determines output good or bad kitty and retrieves image
         
     def getKitty(self):
         
@@ -51,7 +57,9 @@ class GoodKittyBadKitty(EasyFrame):
 
             self.image = PhotoImage(file = "badkitty.png")
             imageLabel["image"] = self.image
-            
+
+#close application
+    
     def close(self):
         self.master.destroy()
 
